@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --gold: #c7aa78;
+  --paper: #ded0b5;
+  --dark: #100e12;
+  --panel: #1b171e;
+  --muted: #a49787;
+  --border: #62503c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 35px 16px;
+
+  background:
+    radial-gradient(
+      ellipse at top,
+      #392932 0%,
+      #171219 45%,
+      var(--dark) 100%
+    );
+
+  color: var(--paper);
+  font-family: "Crimson Text", Georgia, serif;
+}
+
+.room {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin: 18px 0 10px;
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(27px, 5vw, 46px);
+  letter-spacing: 4px;
+  text-shadow: 0 0 25px #775139;
+}
+
+h2 {
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 21px;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 18px;
+  font-style: italic;
+}
+
+.puzzle-panel,
+.note,
+.lock-panel {
+  margin: 22px 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    145deg,
+    #211b23,
+    #151218
+  );
+  box-shadow: 0 12px 35px #0007;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 15px auto 22px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.puzzle-image {
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  background: #0d0b0d;
+  box-shadow:
+    0 0 20px #000,
+    0 0 20px #c7aa7815;
+}
+
+.puzzle-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-caption {
+  color: var(--gold);
+  font-style: italic;
+  font-size: 16px;
+}
+
+.note {
+  background: linear-gradient(
+    135deg,
+    #29211d,
+    #19151a
+  );
+  border-color: #786345;
+}
+
+.riddle {
+  margin-top: 22px;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.riddle p {
+  margin: 10px 0;
+}
+
+.lock-panel {
+  padding: 30px 20px;
+}
+
+.lock-icon {
+  color: var(--gold);
+  font-size: 35px;
+}
+
+.lock-panel > p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+label {
+  color: var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 190px;
+  padding: 15px;
+  text-align: center;
+  letter-spacing: 8px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 22px;
+  color: var(--paper);
+  background: var(--dark);
+  border: 1px solid #786247;
+  border-radius: 2px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px #c7aa7840;
+}
+
+button {
+  padding: 14px 25px;
+  color: var(--dark);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ead2a4;
+  box-shadow: 0 0 18px #c7aa7840;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#feedback {
+  min-height: 28px;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+footer {
+  padding: 15px 0;
+  color: #766455;
+  text-align: center;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .puzzle-panel,
+  .note,
+  .lock-panel {
+    padding: 20px 13px;
+  }
+
+  .riddle {
+    font-size: 17px;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+}

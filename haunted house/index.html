@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Broken Mirror | Escape Room</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="room">
+
+    <header class="header">
+      <p class="eyebrow">PARANORMAL INVESTIGATION • CASE 004</p>
+      <h1>THE BROKEN MIRROR</h1>
+      <p class="subtitle">
+        Four witnesses. One secret. Can you escape?
+      </p>
+    </header>
+
+    <section class="puzzle-panel">
+      <h2>THE LAST WITNESS</h2>
+
+      <p class="intro">
+        A mysterious image was discovered inside the abandoned mansion.
+        Something is hidden among the broken fragments.
+      </p>
+
+      <div class="puzzle-image">
+        <img
+			 src="The Last Witness_ Shattered Mirror Riddle.png"
+          alt="A shattered mirror containing mysterious symbols
+          inside a dark haunted mansion"
+        >
+      </div>
+
+      <p class="image-caption">
+        Examine every fragment. Nothing is there by accident.
+      </p>
+    </section>
+
+    <section class="note">
+      <p class="eyebrow">A NOTE LEFT BY THE LAST WITNESS</p>
+
+      <div class="riddle">
+        <p>“The watcher sees what the dead cannot.</p>
+        <p>The night comes before the messenger.</p>
+        <p>The one who opens the way comes last.</p>
+        <p>Restore what is broken, and follow the truth.”</p>
+      </div>
+    </section>
+
+    <section class="lock-panel">
+      <div class="lock-icon">✧</div>
+      <h2>THE FINAL LOCK</h2>
+
+      <p>
+        Identify the symbols, follow the message,
+        and discover the four-digit sequence.
+      </p>
+
+      <form id="lock-form">
+        <label for="code">ENTER THE FOUR-DIGIT CODE</label>
+
+        <input
+          type="text"
+          id="code"
+          inputmode="numeric"
+          pattern="[0-9]{4}"
+          maxlength="4"
+          placeholder="• • • •"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit" id="unlock-button">
+          UNLOCK THE DOOR
+        </button>
+      </form>
+
+      <p id="feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <p>THE HOUSE REMEMBERS EVERYTHING.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
